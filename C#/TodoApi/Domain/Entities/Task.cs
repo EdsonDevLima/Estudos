@@ -1,6 +1,6 @@
 namespace TodoApi.Entities
 {
-    public class Task
+    public class TaskEntity
     {
         private string Tittle{get;set;}
         private string Description{get;set;}
@@ -8,7 +8,7 @@ namespace TodoApi.Entities
         private  DateTime CreateAt = DateTime.Now;
         private  DateTime CompletedAt{get;set;}
 
-        public Task(string tittle,string description,string responsible,DateTime completedAt)
+        public TaskEntity(string tittle,string description,string responsible,DateTime completedAt)
         {
             this.Tittle = tittle;
             this.Description = description;

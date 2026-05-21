@@ -1,17 +1,20 @@
 namespace TodoApi.Entities
 {
-    public class User
+    public class UserEntity
     {
         private string Name{get;set;}
         private string Position{get;set;}
         private string Email{get;set;}
         private string Password{get;set;}
+
+        private string Role{get;set;}
     
-        public User(string name, string email, string position)
+        public UserEntity(string name, string email, string position,string role)
         {
             this.Name = name;
             this.Email = email;
             this.Position = position;
+            this.Role = role;
         }
         public void SetEmail(string newEmail)
         {
