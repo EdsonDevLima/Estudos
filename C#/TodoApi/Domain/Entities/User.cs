@@ -2,6 +2,7 @@ namespace TodoApi.Entities
 {
     public class UserEntity
     {
+        public Guid Id { get; set; }
         private string Name{get;set;}
         private string Position{get;set;}
         private string Email{get;set;}
@@ -11,6 +12,7 @@ namespace TodoApi.Entities
     
         public UserEntity(string name, string email, string position,string role)
         {
+            Id = Guid.NewGuid();
             this.Name = name;
             this.Email = email;
             this.Position = position;
