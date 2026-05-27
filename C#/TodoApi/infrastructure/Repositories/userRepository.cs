@@ -7,6 +7,18 @@ namespace TodoApi.Infrastructure.Database.Repositories
     {
         public Task Create(UserEntity newUser)
         {
+                var sql = @"
+                
+                ";
+            try
+            {
+                
+            }
+            catch (Exception Error)
+            {
+                
+                throw new Exception("Erro ao criar usuario: " + Error.Message);
+            }
             throw new NotImplementedException();
         }
 

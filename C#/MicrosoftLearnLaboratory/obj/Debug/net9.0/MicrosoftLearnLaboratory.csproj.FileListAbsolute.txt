@@ -1,0 +1,15 @@
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/MicrosoftLearnLaboratory/bin/Debug/net9.0/MicrosoftLearnLaboratory
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/MicrosoftLearnLaboratory/bin/Debug/net9.0/MicrosoftLearnLaboratory.deps.json
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/MicrosoftLearnLaboratory/bin/Debug/net9.0/MicrosoftLearnLaboratory.runtimeconfig.json
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/MicrosoftLearnLaboratory/bin/Debug/net9.0/MicrosoftLearnLaboratory.dll
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/MicrosoftLearnLaboratory/bin/Debug/net9.0/MicrosoftLearnLaboratory.pdb
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/MicrosoftLearnLaboratory/obj/Debug/net9.0/MicrosoftLearnLaboratory.GeneratedMSBuildEditorConfig.editorconfig
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/MicrosoftLearnLaboratory/obj/Debug/net9.0/MicrosoftLearnLaboratory.AssemblyInfoInputs.cache
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/MicrosoftLearnLaboratory/obj/Debug/net9.0/MicrosoftLearnLaboratory.AssemblyInfo.cs
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/MicrosoftLearnLaboratory/obj/Debug/net9.0/MicrosoftLearnLaboratory.csproj.CoreCompileInputs.cache
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/MicrosoftLearnLaboratory/obj/Debug/net9.0/MicrosoftLearnLaboratory.sourcelink.json
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/MicrosoftLearnLaboratory/obj/Debug/net9.0/MicrosoftLearnLaboratory.dll
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/MicrosoftLearnLaboratory/obj/Debug/net9.0/refint/MicrosoftLearnLaboratory.dll
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/MicrosoftLearnLaboratory/obj/Debug/net9.0/MicrosoftLearnLaboratory.pdb
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/MicrosoftLearnLaboratory/obj/Debug/net9.0/MicrosoftLearnLaboratory.genruntimeconfig.cache
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/MicrosoftLearnLaboratory/obj/Debug/net9.0/ref/MicrosoftLearnLaboratory.dll
