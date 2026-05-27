@@ -4,9 +4,9 @@ namespace TodoApi.Domain.Repositories;
 
 public interface ITaskRepostory
 {
-    Task Create(TaskEntity newTask);
-    Task<bool> Update(TaskEntity task);
+    Task<string> Create(TaskEntity newTask);
+    Task<string> Update(TaskEntity task);
     Task<List<TaskEntity>> GetAll();
     Task<List<TaskEntity>> GetByUser(UserEntity user);
-    Task Remove(TaskEntity task);
+    Task<string> Remove(TaskEntity task);
 }

@@ -1,32 +1,105 @@
 using TodoApi.Domain.Repositories;
 using TodoApi.Entities;
+using Dapper;
 
 namespace TodoApi.Infrastructure.Database.Repositories;
 
 public class TaskRepositories : ITaskRepostory
 {
-    public Task Create(TaskEntity newTask)
+    private readonly IDbConnectionFactory _connection;
+    public TaskRepositories(IDbConnectionFactory connection)
     {
-        throw new NotImplementedException();
+        this._connection = connection;
+    }
+    public async Task<string> Create(TaskEntity newTask)
+    {
+        var sql = @"
+        INSERT INTO Task(Tittle,Description,UserId,Status,CompletedAt
+        VALUES (@Tittle,@Description,@UserId,@Status,@CompletedAt));
+        ";
+        try
+        {
+            var connection =  _connection.CreateConnection();
+            await connection.ExecuteAsync(sql,newTask);
+            return "Task criada com sucesso";
+        }
+        catch(Exception Error)
+        {
+            throw new Exception("Erro ao criar task: " + Error.Message);
+            
+        }
     }
 
-    public Task<List<TaskEntity>> GetAll()
+    public async Task<List<TaskEntity>> GetAll()
     {
-        throw new NotImplementedException();
+        var sql = @"SELECT * FROM Task";
+        try
+        {
+           var connection = this._connection.CreateConnection();
+
+           var tasks = await connection.QueryAsync<TaskEntity>(sql);
+
+           return tasks.ToList();
+        }
+        catch (Exception Error)
+        {
+            throw new Exception("Erro ao buscar Tasks:" + Error.Message);
+        }
     }
 
-    public Task<List<TaskEntity>> GetByUser(UserEntity user)
+    public async Task<List<TaskEntity>> GetByUser(UserEntity user)
     {
-        throw new NotImplementedException();
+        var sql = @"SELECT * FROM Task WHERE Id = @Id";
+        try
+        {
+           var connection = this._connection.CreateConnection();
+
+           var tasks = await connection.QueryAsync<TaskEntity>(sql,user);
+
+           return tasks.ToList();
+        }
+        catch (Exception Error)
+        {
+            throw new Exception("Erro ao buscar Tasks:" + Error.Message);
+        }
     }
 
-    public Task Remove(TaskEntity task)
+    public async Task<string> Remove(TaskEntity task)
     {
-        throw new NotImplementedException();
+        var sql = @"DELETE FROM Task WHERE Id = @Id";
+        try
+        {
+        var connection = _connection.CreateConnection();
+        await connection.QueryAsync<TaskEntity>(sql,task);
+        return "Task Removida";
+        }
+        catch (Exception Error)
+        {
+        throw new Exception("Erro ao remover Task:" + Error);
+        }
     }
 
-    public Task<bool> Update(TaskEntity task)
+    public async Task<string> Update(TaskEntity task)
     {
-        throw new NotImplementedException();
+        var sql = @"
+        UPDATE Task
+        SET Tittle = @Tittle,
+        Description = @Descrition,
+        UserId = @UserId,
+        Status = @Status,
+        CompletedAt = @CompletedAt";
+
+        try
+        {
+            var connection = this._connection.CreateConnection();
+
+            await connection.QueryAsync(sql,task);
+
+            return "Task atualizada";
+        }
+        catch(Exception Error)
+        {
+            throw new Exception("Erro ao atualizar task: " + Error);
+        }
     }
 }
