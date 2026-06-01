@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MicrosoftLearnLaboratory")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4248ae154a9da16fb3bf3dbc145b87f093083c53")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7253c52989f1795ee900ea0e0f324546e830fc2a")]
 [assembly: System.Reflection.AssemblyProductAttribute("MicrosoftLearnLaboratory")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MicrosoftLearnLaboratory")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
