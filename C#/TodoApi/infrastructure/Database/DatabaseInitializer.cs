@@ -14,29 +14,31 @@ public class DataInitializer
     public async Task InitializeAsync()
     {
         const string sql = @"
-        IF NOT EXIST (SELECT * FROM sys.tables WHERE name = 'Users')
-        BENGIN
+        IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Users')
+        BEGIN
             CREATE TABLE Users(
-                Id UNIQUEIINDETIFIER NOT NULL PRIMARY KEY,
+                Id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
                 Name NVARCHAR(100) NOT NULL,
                 Position NVARCHAR(100) NOT NULL,
                 Email NVARCHAR(100) NOT NULL,
                 Password NVARCHAR(250) NOT NULL,
-                Role NVARCHAR(50) NOT NULL,
+                Role NVARCHAR(50) NOT NULL
             );
         END;
-        IF NOT EXIST (SELECT * FROM sys.tables WHERE name = 'Tasks')
-        BENGIN
+
+        IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Tasks')
+        BEGIN
             CREATE TABLE Tasks(
-            Id UNIQUEIINDETIFIER NOT NULL PRIMARY KEY,
-            Tittle NVARCHAR(100) NOT NULL,
-            Status NVARCHAR(50) NOT NULL,
-            Description NVARCHAR NOT NULL,
-            UserID UNIQUEIDENTIFIER NOT NULL,
-            CreateAt DATETIME2 NOT NULL,
-            CompletedAt DATETIME2 NOT NULL
-            CONSTRAINT FK_Tasks_Users
-            FOREIGN KEY (UserId) REFERENCES Users(Id)
+                Id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
+                Title NVARCHAR(100) NOT NULL,
+                Status NVARCHAR(50) NOT NULL,
+                Description NVARCHAR(MAX) NOT NULL,
+                UserId UNIQUEIDENTIFIER NOT NULL,
+                CreatedAt DATETIME2 NOT NULL,
+                CompletedAt DATETIME2 NULL,
+
+                CONSTRAINT FK_Tasks_Users
+                FOREIGN KEY (UserId) REFERENCES Users(Id)
             );
         END;
         ";
