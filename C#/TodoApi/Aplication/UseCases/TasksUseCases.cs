@@ -4,44 +4,46 @@ using TodoApi.Entities;
 
 namespace TodoApi.UseCases
 {
-    public class UserUseCases
+    public class TaskUseCases
     {
 
-        private readonly IUserRepostory userRepository;
-        public UserUseCases(IUserRepostory _userRepository)
+        private readonly ITaskRepostory TaskRepository;
+        private readonly IUserRepostory UserRepository;
+        public TaskUseCases(ITaskRepostory _TaskRepository,IUserRepostory _UserRepository)
         {
-            this.userRepository = _userRepository;
+            this.TaskRepository = _TaskRepository;
+            this.UserRepository = _UserRepository;
         }
 
-        public async Task<ResponseDto> Create(IUserCreateDto data)
+        public async Task<ResponseDto> Create(ITaskCreateDto data)
         {
             try
             {
 
-                if(data.password == data.confirmPassword)
+                var user = await this.UserRepository.GetById(data.UserId.ToString());
+                if(user.Count() > 0)
                 {
-                var newUser = new UserEntity(data.name,data.email,"user","user");  
+                var newTask = new TaskEntity(data.Tittle,data.Status,data.Description,data.UserId,data.CompletedAt);  
 
-                    await this.userRepository.Create(newUser);   
+                await this.TaskRepository.Create(newTask);   
 
                 var response = new ResponseDto{
                     code = 201,
-                    message = "Usuario criado com sucesso"
+                    message = "Task criada com sucesso"
                 };
 
                 return response;
-
                 }
                 else
                 {
-                var response = new ResponseDto{
+                   var response = new ResponseDto{
                     code = 401,
-                    message = "Erro na confirmação de senha"
+                    message = "Usuario invalido ou sem permissão para a ação"
                 };
-                return response;
 
+                return response;  
                 }
-
+                
 
             }
             catch(Exception error)
@@ -53,19 +55,22 @@ namespace TodoApi.UseCases
                 return response;   
             }
         }
-        public async Task<ResponseDto> Remove(string uuid)
+        public async Task<ResponseDto> Remove(string taskUuid,string userUuid)
         {
             try
             {
-                var data = await this.userRepository.GetById(uuid);
+                var user = await this.UserRepository.GetById(userUuid);
                 
-                if(data.Count > 0)
+                if(user.Count > 0)
                 {
 
-                await this.userRepository.Remove(uuid);
+                var data = await  this.TaskRepository.GetByUser(user[0]);
+
+                await this.TaskRepository.Remove(data.Find(t=>t.Id.ToString() == taskUuid));
+
                 var response = new ResponseDto{
                     code = 206,
-                    message = "Usuario removido"
+                    message = "Task removida"
                 };
                 return response;
                 }
@@ -91,21 +96,24 @@ namespace TodoApi.UseCases
         {
             try
             {
-                List<UserEntity> users = [];
+                List<TaskEntity> Tasks = [];
 
                 if (uuid == "")
                 {
-                    users = await this.userRepository.GetAll();
+                    Tasks = await this.TaskRepository.GetAll();
                 }
                 else
                 {
-                    users = await this.userRepository.GetById(uuid);
+                    var data = await this.TaskRepository.GetAll();
+                        Tasks = data
+                        .Where(t => t.Id.ToString() == uuid)
+                        .ToList(); 
                 }
 
                 var response = new ResponseDtoWitchItems{
                     code = 201,
                     message = "Sucesso",
-                    items = users.Cast<object>().ToList()
+                    items = Tasks.Cast<object>().ToList()
             };
                 return response;
 

@@ -19,9 +19,15 @@ namespace TodoApi.Dtos
         public string id{get;set;}
         public string email{get;set;}
     }
-    public interface ResponseDto
+    public class ResponseDto
     {
         public int code{get;set;}
         public string message{get;set;}
+    }
+        public class ResponseDtoWitchItems
+    {
+        public int code{get;set;}
+        public string message{get;set;}
+        public List<object> items{get;set;}
     }
 }
