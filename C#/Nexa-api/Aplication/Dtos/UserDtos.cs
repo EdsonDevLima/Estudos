@@ -1,4 +1,4 @@
-namespace TodoApi.Dtos
+namespace Nexa.Dtos
 {
     public interface IUserCreateDto
     {

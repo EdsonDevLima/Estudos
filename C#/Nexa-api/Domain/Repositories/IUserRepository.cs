@@ -1,6 +1,6 @@
-using TodoApi.Entities;
+using Nexa.Entities;
 
-namespace TodoApi.Domain.Repositories;
+namespace Nexa.Domain.Repositories;
 
 public interface IUserRepostory
 {

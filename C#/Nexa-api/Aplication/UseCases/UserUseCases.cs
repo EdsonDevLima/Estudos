@@ -1,8 +1,8 @@
-using TodoApi.Domain.Repositories;
-using TodoApi.Dtos;
-using TodoApi.Entities;
+using Nexa.Domain.Repositories;
+using Nexa.Dtos;
+using Nexa.Entities;
 
-namespace TodoApi.UseCases
+namespace Nexa.UseCases
 {
     public class UserUseCases
     {

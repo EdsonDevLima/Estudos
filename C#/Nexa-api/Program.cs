@@ -1,6 +1,6 @@
 using SystemSaudeApi.Infrastructure.Database;
-using TodoApi.Infrastructure.Database;
-using TodoApi.UseCases;
+using Nexa.Infrastructure.Database;
+using Nexa.UseCases;
 
 var builder = WebApplication.CreateBuilder(args);
 

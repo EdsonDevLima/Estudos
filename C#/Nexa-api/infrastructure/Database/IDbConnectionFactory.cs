@@ -1,6 +1,6 @@
 using System.Data;
 
-namespace TodoApi.Infrastructure.Database;
+namespace Nexa.Infrastructure.Database;
 
 public interface IDbConnectionFactory
 {

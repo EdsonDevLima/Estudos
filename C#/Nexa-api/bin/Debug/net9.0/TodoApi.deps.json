@@ -6,14 +6,14 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "TodoApi/1.0.0": {
+      "Nexa/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.79",
           "Microsoft.Data.SqlClient": "7.0.1",
           "Swashbuckle.AspNetCore": "10.2.1"
         },
         "runtime": {
-          "TodoApi.dll": {}
+          "Nexa.dll": {}
         }
       },
       "Dapper/2.1.79": {
@@ -407,7 +407,7 @@
     }
   },
   "libraries": {
-    "TodoApi/1.0.0": {
+    "Nexa/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

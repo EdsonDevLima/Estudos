@@ -1,6 +1,6 @@
 using System.Data;
 using Microsoft.Data.SqlClient;
-using TodoApi.Infrastructure.Database;
+using Nexa.Infrastructure.Database;
 
 namespace SystemSaudeApi.Infrastructure.Database;
 

@@ -1,7 +1,7 @@
-using TodoApi.Domain.Repositories;
-using TodoApi.Entities;
+using Nexa.Domain.Repositories;
+using Nexa.Entities;
 
-namespace TodoApi.Infrastructure.Database.Repositories
+namespace Nexa.Infrastructure.Database.Repositories
 {
     class UserRepository : IUserRepostory
     {

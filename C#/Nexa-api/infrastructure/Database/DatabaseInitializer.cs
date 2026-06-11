@@ -1,6 +1,6 @@
 using Dapper;
 
-namespace TodoApi.Infrastructure.Database;
+namespace Nexa.Infrastructure.Database;
 
 public class DataInitializer
 {

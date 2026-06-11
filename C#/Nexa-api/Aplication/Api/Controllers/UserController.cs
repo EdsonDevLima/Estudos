@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using TodoApi.Dtos;
-using TodoApi.UseCases;
+using Nexa.Dtos;
+using Nexa.UseCases;
 
-namespace TodoApi.Controllers
+namespace Nexa.Controllers
 {
     [ApiController]
     [Route("user")]

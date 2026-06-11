@@ -1,8 +1,8 @@
-using TodoApi.Domain.Repositories;
-using TodoApi.Entities;
+using Nexa.Domain.Repositories;
+using Nexa.Entities;
 using Dapper;
 
-namespace TodoApi.Infrastructure.Database.Repositories;
+namespace Nexa.Infrastructure.Database.Repositories;
 
 public class TaskRepositories : ITaskRepostory
 {

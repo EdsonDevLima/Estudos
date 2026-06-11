@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/TodoApi.csproj": {}
+    "/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/Nexa.csproj": {}
   },
   "projects": {
-    "/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/TodoApi.csproj": {
+    "/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/Nexa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/TodoApi.csproj",
-        "projectName": "TodoApi",
-        "projectPath": "/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/TodoApi.csproj",
+        "projectUniqueName": "/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/Nexa.csproj",
+        "projectName": "Nexa",
+        "projectPath": "/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/Nexa.csproj",
         "packagesPath": "/home/aaa/.nuget/packages/",
         "outputPath": "/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/obj/",
         "projectStyle": "PackageReference",
