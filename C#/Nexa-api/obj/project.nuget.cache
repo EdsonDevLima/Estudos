@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aw4BH1bdJwo=",
+  "dgSpecHash": "7s5IAi8IzI8=",
   "success": true,
-  "projectFilePath": "/home/aaa/Área de trabalho/Estudos/Estudos/C#/TodoApi/TodoApi.csproj",
+  "projectFilePath": "/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/TodoApi.csproj",
   "expectedPackageFiles": [
     "/home/aaa/.nuget/packages/dapper/2.1.79/dapper.2.1.79.nupkg.sha512",
     "/home/aaa/.nuget/packages/microsoft.bcl.cryptography/9.0.13/microsoft.bcl.cryptography.9.0.13.nupkg.sha512",

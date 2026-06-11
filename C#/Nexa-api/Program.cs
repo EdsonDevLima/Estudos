@@ -1,5 +1,6 @@
 using SystemSaudeApi.Infrastructure.Database;
 using TodoApi.Infrastructure.Database;
+using TodoApi.UseCases;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,8 +10,9 @@ builder.Services.AddControllers();
 //injeção de depandencia para configuração do banco de dados
 builder.Services.AddScoped<IDbConnectionFactory,SqlServerConnectionFactory>();
 builder.Services.AddScoped<DataInitializer>();
-
-
+//injeção dos casos de uso
+builder.Services.AddScoped<UserUseCases>();
+builder.Services.AddScoped<TaskUseCases>();
 //configuração para documentação swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

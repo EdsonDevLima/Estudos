@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/aaa/Área de trabalho/Estudos/Estudos/C#/TodoApi/TodoApi.csproj": {}
+    "/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/TodoApi.csproj": {}
   },
   "projects": {
-    "/home/aaa/Área de trabalho/Estudos/Estudos/C#/TodoApi/TodoApi.csproj": {
+    "/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/TodoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/aaa/Área de trabalho/Estudos/Estudos/C#/TodoApi/TodoApi.csproj",
+        "projectUniqueName": "/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/TodoApi.csproj",
         "projectName": "TodoApi",
-        "projectPath": "/home/aaa/Área de trabalho/Estudos/Estudos/C#/TodoApi/TodoApi.csproj",
+        "projectPath": "/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/TodoApi.csproj",
         "packagesPath": "/home/aaa/.nuget/packages/",
-        "outputPath": "/home/aaa/Área de trabalho/Estudos/Estudos/C#/TodoApi/obj/",
+        "outputPath": "/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/aaa/.nuget/NuGet/NuGet.Config"
