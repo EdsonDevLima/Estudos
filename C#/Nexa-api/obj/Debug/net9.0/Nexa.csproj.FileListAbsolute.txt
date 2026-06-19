@@ -1,0 +1,8 @@
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/obj/Debug/net9.0/Nexa.csproj.AssemblyReference.cache
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/obj/Debug/net9.0/Nexa.GeneratedMSBuildEditorConfig.editorconfig
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/obj/Debug/net9.0/Nexa.AssemblyInfoInputs.cache
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/obj/Debug/net9.0/Nexa.AssemblyInfo.cs
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/obj/Debug/net9.0/Nexa.csproj.CoreCompileInputs.cache
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/obj/Debug/net9.0/Nexa.MvcApplicationPartsAssemblyInfo.cs
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/obj/Debug/net9.0/Nexa.MvcApplicationPartsAssemblyInfo.cache
+/home/aaa/Área de trabalho/Estudos/Estudos/C#/Nexa-api/obj/Debug/net9.0/Nexa.sourcelink.json

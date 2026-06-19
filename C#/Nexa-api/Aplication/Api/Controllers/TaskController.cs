@@ -6,24 +6,24 @@ using Nexa.UseCases;
 namespace Nexa.Controllers
 {
     [ApiController]
-    [Route("user")]
-    public class UserController:ControllerBase
+    [Route("task")]
+    public class TaskController:ControllerBase
     {
         
-    private readonly UserUseCases userUseCases;
+    private readonly TaskUseCases TaskUseCases;
 
-    public UserController(UserUseCases _userUseCases)
+    public TaskController(TaskUseCases _TaskUseCases)
     {
-            this.userUseCases = _userUseCases;
+            this.TaskUseCases = _TaskUseCases;
     }
 
     [HttpPost]
     [Route("/")]
-    public async Task<ActionResult> Create(IUserCreateDto data)
+    public async Task<ActionResult> Create(ITaskCreateDto data)
         {
             try
             {
-            var result = await this.userUseCases.Create(data);
+            var result = await this.TaskUseCases.Create(data);
 
             return Ok(result);
 
@@ -36,11 +36,11 @@ namespace Nexa.Controllers
         }
         [HttpGet]
         [Route("all")]
-        public async Task<ActionResult> GetAll(IUserCreateDto data)
+        public async Task<ActionResult> GetAll(ITaskCreateDto data)
         {
             try
             {
-            var result = await this.userUseCases.Get();
+            var result = await this.TaskUseCases.Get();
 
             return Ok(result);
 
@@ -57,7 +57,7 @@ namespace Nexa.Controllers
         {
             try
             {
-            var result = await this.userUseCases.Get(id);
+            var result = await this.TaskUseCases.Get(id);
 
             return Ok(result);
 
